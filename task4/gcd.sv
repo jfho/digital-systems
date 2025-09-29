@@ -105,7 +105,6 @@ endmodule
 
 module DataPath (
     input  logic          clk,      // The clock signal.
-    input  logic          reset,    // Reset the module.
     input  logic [15 : 0] AB,
     input  logic          ABorALU,
     input  logic          LDA,
@@ -172,7 +171,6 @@ module gcd (
   );
   DataPath u_DataPath (
       .clk    (clk),
-      .reset  (reset),
       .AB     (AB),
       .ABorALU(ABorALU),
       .LDA    (LDA),
