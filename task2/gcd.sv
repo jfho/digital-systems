@@ -70,7 +70,7 @@ module gcd (
                 next_state = decision;
             end
             decision: begin
-                if (reg_a = reg_b) begin
+                if (reg_a == reg_b) begin
                     next_state = fin;
                 end else if (reg_a > reg_b) begin
                     next_state = greaterA;
