@@ -115,8 +115,10 @@ module DataPath (
     output logic          Z
 );
   logic [15 : 0] C_int, reg_a_out, reg_b_out, Y;
-  c_buf buffer (
-      .data_in (C_int),
+  c_mux buffer (
+      .data_in1 (C_int),
+      .data_in2 ('z),
+      .s (FN[1]),
       .data_out(C)
   );
   c_mux MUX (
